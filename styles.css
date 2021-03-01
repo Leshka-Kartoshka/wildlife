@@ -259,6 +259,7 @@ header{
     position: relative;
     display: block;
     width: 100%;
+    border: 1px solid red;
     margin-top: 120px;
 }
 .slider{
@@ -272,7 +273,7 @@ header{
     justify-content: center;
 }
 .element{
-    width: 33.33333333vw;
+    width: calculate();
     display: flex;
     justify-content: center;
     width: 300px;
@@ -297,7 +298,8 @@ header{
 /*Laptops*/
 @media(min-width: 1025px){
     .element{
-        width: 33.3vw;
+        width: 400px;
+        max-width: 33.33vw;
     }
 }
 @media (max-width: 1024px){
