@@ -48,15 +48,28 @@
             <h2 class="articles__header">Latest articles</h2>
             <sh-2 class="articles__subheader">Breaking news from the wild</sh-2>
             <div class="slider__window">
-                <img src="/images/left.svg" alt="left" class="left">
-                <img src="/images/right.svg" alt="right" class="right">
+                <img src="/images/left.svg" alt="left" class="left" onclick="slide('left')">
+                <img src="/images/right.svg" alt="right" class="right" onclick="slide('right')">
                 <div class="slider">
-                    <div class="element" id="element1"><img src="/images/element1.jpg" alt="Deer"></div>
-                    <div class="element" id="element2"><img src="/images/element2.jpg" alt="Squirrel"></div>
-                    <div class="element" id="element3"><img src="/images/element3.jpg" alt="Bird"></div>
+                    <a class="element" id="element1">
+                        <img src="/images/element1.jpg" alt="Deer" class="element__image">
+                        <h4 class="element__header">Deer</h4>
+                        <small class="element__subheader">Naturalist investigation</small>
+                    </a>
+                    <a class="element" id="element2">
+                        <img src="/images/element2.jpg" alt="Squirrel" class="element__image">
+                        <h4 class="element__header">Squirrel</h4>
+                        <small class="element__subheader">Kamikaze squirrel</small>
+                    </a>
+                    <a class="element" id="element3">
+                        <img src="/images/element3.jpg" alt="Bird" class="element__image">
+                        <h4 class="element__header">Bird</h4>
+                        <small class="element__subheader">Birds fight club</small>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
+    <script src="scripts.js"></script>
 </body>
 </html>
