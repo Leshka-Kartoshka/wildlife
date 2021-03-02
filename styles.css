@@ -78,7 +78,7 @@ sh-2{
 }
 header{
     min-height: 100vh;
-    background: url(/images/hero.png) top center / cover;
+    background: url(/assets/hero.png) top center / cover;
 }
 .container{
     width:1200px;
@@ -374,7 +374,7 @@ header{
 }
 .pages{
     display: flex;
-    background: url(images/footer.jpg) top center / cover;
+    background: url(assets/footer.jpg) top center / cover;
     width: 100vw;
     height: 30vh;
     flex-direction: row;
