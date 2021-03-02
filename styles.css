@@ -52,6 +52,12 @@ h2{
     color: #333333;
     line-height: 72px;
 }
+h3{
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 40px;
+    color: #333;
+}
 h4{
     font-weight: normal;
     font-size: 22px;
@@ -122,6 +128,7 @@ header{
 }
 .navigation__links{
     transition: 0.5s all ease;
+    color: #f7f7f7;
 }
 .navigation__links:visited, .navigation__links:focus{
     color:white;
@@ -274,6 +281,7 @@ header{
     display: block;
     width: 100%;
     margin-top: 120px;
+    margin-bottom: 239px;
 }
 .slider{
     transition: 1s left ease;
@@ -305,9 +313,11 @@ header{
     transform: translateY(-50%);
 }
 .right{
+    display: none;
     right:10px;
 }
 .left{
+    display: none;
     left:10px;
 }
 .element__header{
@@ -324,6 +334,76 @@ header{
     position: absolute;
     text-align: center;
 }
+.email{
+    align-items: center;
+    background-color: #ccc;
+    flex-direction: column;
+    padding-bottom: 239px;
+}
+.get_notified{
+    text-align: center;
+    margin-bottom: 59px;
+}
+.text_area{
+    display: block;
+    width:540px;
+    max-height: 60px!important;
+    background-color: transparent;
+    border: 1px solid #666;
+    color: #666;
+    outline: none;
+    font-size: 23px;
+    line-height: 59px;
+    padding-left: 15px;
+    resize: none;
+}
+.send_button{
+    line-height: 27px;
+    outline: none;
+    color: #f7f7f7;
+    border-radius: 0 5px 5px 0;
+    width:120px;
+    height: 60px;
+    background-color: #CD6326;
+    border: 1px solid #CD6326;
+    cursor: pointer;
+}
+.submit{
+    max-width: 100%;;
+    display: flex;
+}
+.pages{
+    display: flex;
+    background: url(images/footer.jpg) top center / cover;
+    width: 100vw;
+    height: 30vh;
+    flex-direction: row;
+}
+.footer{
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+}
+.footer__logo{
+    padding-top: 0;
+}
+.social__button{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+    margin-left: 27px;
+    justify-content: center;
+    align-items: center;
+}
+.social__button:first-child{
+    margin-left: 0;
+}
+.social{
+    display: flex;
+}
 /*Laptops*/
 @media(min-width: 1025px){
     .element{
@@ -332,6 +412,9 @@ header{
     }
 }
 @media (max-width: 1024px){
+    .left, .right{
+        display: block;
+    }
     .element{
         width: 50vw;
     }
@@ -380,6 +463,9 @@ header{
     .element{
         width: 100vw;
         justify-content: center;
+    }
+    .footer{
+        flex-direction: column;
     }
 }
 /*Small phones*/
