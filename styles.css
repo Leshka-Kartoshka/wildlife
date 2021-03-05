@@ -41,6 +41,8 @@ body{
     flex-wrap:wrap;
 }
 h1{
+    font-family: open sans;
+    font-weight: 400;
     font-size: 48px;
     color: #CD6326;
 }
@@ -77,8 +79,9 @@ sh-2{
     color: #666;
 }
 header{
+    letter-spacing: 0.08em;
     min-height: 100vh;
-    background: url(/assets/hero.png) top center / cover;
+    background: url(assets/hero.png) top center / cover;
 }
 .container{
     width:1200px;
@@ -126,6 +129,13 @@ header{
     padding: 0 23px;
     height: 50px;
 }
+.signIn:hover{
+    background-color: #CD6326;
+}
+.signIn:active{
+    background-color: #90560E;
+}
+
 .navigation__links{
     transition: 0.5s all ease;
     color: #f7f7f7;
@@ -134,7 +144,7 @@ header{
     color:white;
     outline: none;
 }
-.navigation__links:hover, .signIn:hover, .fa-search:hover{
+.navigation__links:hover, .fa-search:hover{
     color: #888;
 }
 .fa-search{
@@ -142,11 +152,12 @@ header{
     transition: 0.5s all ease;
 }
 .text-regular-light{
+    font-weight: normal;
     font-size: 18px;
     color: #f7f7f7;
 }
 .donate{
-    transition: 0.5s color ease;
+    transition: 0.5s background-color ease;
     display: block;
     font-size: 23px;
     height: 60px;
@@ -163,7 +174,10 @@ header{
     
 }
 .donate:hover{
-    color: #888;
+    background-color: #E69027;
+}
+.donate:active{
+    background-color: #90560E;
 }
 .motto{
     margin-top: 15vh;
@@ -240,15 +254,17 @@ header{
 }
 .burger > .mobile-menu{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items:center;
+    justify-content: space-around;
     transition: 1s top ease;
     position: fixed;
     top:-100vh;
     left:0;
     width: 100vw;
     height: 100vh;
-    background-color: #126116;
+    background-color: #173a1a;
     z-index: -2;
 }
 .mobile-menu > .navigation__links{
@@ -358,6 +374,7 @@ header{
     resize: none;
 }
 .send_button{
+    transition: 0.5s background-color ease;
     line-height: 27px;
     outline: none;
     color: #f7f7f7;
@@ -368,15 +385,23 @@ header{
     border: 1px solid #CD6326;
     cursor: pointer;
 }
+.send_button:hover{
+    background-color: #E69027;
+}
+.send_button:active{
+    background-color: #90560E;
+}
+
 .submit{
     max-width: 100%;;
     display: flex;
 }
 .pages{
+    justify-content: space-around;
     display: flex;
     background: url(assets/footer.jpg) top center / cover;
     width: 100vw;
-    height: 30vh;
+    min-height: 30vh;
     flex-direction: row;
 }
 .footer{
@@ -389,20 +414,56 @@ header{
     padding-top: 0;
 }
 .social__button{
+    position: relative;
     display: flex;
     width: 40px;
     height: 40px;
     border-radius: 20px;
     background-color: #f7f7f7;
     margin-left: 27px;
-    justify-content: center;
-    align-items: center;
+}
+.social__button > a{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 87%;
+    height: 87%;
+    background-repeat: no-repeat !important;
+}
+.social__navigation{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+.social__navigation > .navigation__links{
+    flex-grow: 1;
+}
+#social__button__image1{
+    margin-top: 3px;
+    background: url(assets/facebook.svg) top center;
+}
+#social__button__image2{
+    margin-top: 3px;
+    background: url(assets/instagram.svg) top center;
+}
+#social__button__image3{
+    margin-top: 4px;
+    background: url(assets/pinterest.svg) top center;
+}
+#social__button__image4{
+    margin-top: 5px;
+    margin-left: -2px;
+    background: url(assets/telegram.svg) top center;
 }
 .social__button:first-child{
     margin-left: 0;
 }
 .social{
+    width: 60%;
+    justify-content: center;
     display: flex;
+    flex-wrap: nowrap;
 }
 /*Laptops*/
 @media(min-width: 1025px){
@@ -449,6 +510,9 @@ header{
         display: none;
     }
     .mobile-navigation{
+        display: flex;
+    }
+    .mobile-navigation *{
         display: block;
     }
 }
@@ -457,8 +521,8 @@ header{
     .motto{
         margin-top: 30vh;
     }
-    .mobile-navigation{
-        display: block;
+    .mobile-navigation *{
+        display: flex;
     }
     .element{
         width: 100vw;
@@ -467,10 +531,40 @@ header{
     .footer{
         flex-direction: column;
     }
+    .social{
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    .social__navigation{
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    .social__navigation > a{
+        margin-bottom: 15px;
+    }
+    .social__button:first-child{
+        margin-left: 0;
+    }
+    .pages{
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .logo{
+        margin-top: 20px;
+    }
 }
 /*Small phones*/
 @media (max-width: 479px){
     .mobile-navigation{
         display: block;
+    }
+}
+@media (max-width: 876px){
+    .social__navigation{
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
     }
 }

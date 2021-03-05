@@ -11,31 +11,30 @@
 <body>
     <header>
         <div class="container">
-            <div class="menu">
+            <nav class="menu">
                 <div class="logo">
-                    <img id="logo" src="assets/logo.svg" alt="logo">
+                    <img id="logo" src="./assets/logo.svg" alt="logo">
                     <p class="logo__name">WILDLIFE</p>
                 </div>
-                <nav class="navigation">
+                <ul class="navigation">
                     <li><a href="#" class="navigation__links">Blog</a></li>
                     <li><a href="#" class="navigation__links">Contacts</a></li>
                     <li><i class="fas fa-search"></i></li>
-                    <button class="signIn">Sign in</button>
-                    
-                </nav>
-                <ul class="mobile-navigation">
+                    <button class="signIn">Sign in</button> 
+                </ul>
+                <nav class="mobile-navigation">
                     <div class="burger">
                         <span class="bars"></span>
                         <input type="checkbox" name="open" class="open-checkbox">
-                        <nav class="mobile-menu">
-                            <a href="#" class="navigation__links">Blog</a>
-                            <a href="#" class="navigation__links">Contacts</a>
-                            <a href="#" class="search navigation__links">Search</a>
-                            <a href="#" class="signIn__button navigation__links">Sign In</a>
-                        </nav>
+                        <ul class="mobile-menu">
+                            <li><a href="#" class="navigation__links">Blog</a></li>
+                            <li><a href="#" class="navigation__links">Contacts</a></li>
+                            <li><a href="#" class="search navigation__links">Search</a></li>
+                            <li><a href="#" class="signIn__button navigation__links">Sign In</a></li>
+                        </ul>
                     </div>
-                </ul>
-            </div>
+                </nav>
+            </nav>
             <div class="motto">
                 <h1>Survival</h1>
                 <p class="description text-regular-light">What this means is that we exist<br>to help protect our environment<br>and do in numbers of ways. You<br>can save the planet by donation.
@@ -48,21 +47,21 @@
             <h2 class="articles__header">Latest articles</h2>
             <sh-2 class="articles__subheader">Breaking news from the wild</sh-2>
             <div class="slider__window">
-                <img src="assets/left.svg" alt="left" class="left" onclick="slide('left')">
-                <img src="assets/right.svg" alt="right" class="right" onclick="slide('right')">
+                <img src="./assets/left.svg" alt="left" class="left" onclick="slide('left')">
+                <img src="./assets/right.svg" alt="right" class="right" onclick="slide('right')">
                 <div class="slider">
                     <a class="element" id="element1">
-                        <img src="assets/element1.jpg" alt="Deer" class="element__image">
+                        <img src="./assets/element1.jpg" alt="Deer" class="element__image">
                         <h4 class="element__header">Deer</h4>
                         <small class="element__subheader">Naturalist investigation</small>
                     </a>
                     <a class="element" id="element2">
-                        <img src="assets/element2.jpg" alt="Squirrel" class="element__image">
+                        <img src="./assets/element2.jpg" alt="Squirrel" class="element__image">
                         <h4 class="element__header">Squirrel</h4>
                         <small class="element__subheader">Kamikaze squirrel</small>
                     </a>
                     <a class="element" id="element3">
-                        <img src="assets/element3.jpg" alt="Bird" class="element__image">
+                        <img src="./assets/element3.jpg" alt="Bird" class="element__image">
                         <h4 class="element__header">Bird</h4>
                         <small class="element__subheader">Birds fight club</small>
                     </a>
@@ -72,27 +71,29 @@
     </section>
     <section class="email">
         <h3 class="get_notified">Get notified about new amazing articles</h3>
-        <div class="submit">
-            <textarea class="text_area" wrap="off" placeholder="Email"></textarea>
-            <button class="send_button">Send</button>
-        </div>
+        <form class="submit">
+            <input class="text_area" wrap="off" placeholder="Email">
+            <input type="submit" class="send_button" value="Send">
+        </form>
     </section>
     <footer class="pages">
         <div class="container">
             <div class="footer">
                 <div class="logo footer__logo">
-                    <img id="logo" src="assets/logo.svg" alt="logo">
+                    <img id="logo" src="./assets/logo.svg" alt="logo">
                     <p class="logo__name">WILDLIFE</p>
                 </div>
-                <a href="#" class="navigation__links">Articles</a>
-                <a href="#" class="navigation__links">About us</a>
-                <a href="#" class="navigation__links">Learn more</a>
-                <nav class="social">
-                    <a href="#" class="social__button"><img src="assets/facebook.svg" alt=""></a>
-                    <a href="#" class="social__button"><img src="assets/instagram.svg" alt=""></a>
-                    <a href="#" class="social__button"><img src="assets/pinterest.svg" alt=""></a>
-                    <a href="#" class="social__button"><img src="assets/telegram.svg" alt=""></a>
-                </nav>
+                <ul class="social">
+                    <div class="social__navigation">
+                        <a href="#" class="navigation__links">Articles</a>
+                        <a href="#" class="navigation__links">About us</a>
+                        <a href="#" class="navigation__links">Learn more</a>
+                    </div>
+                    <li class="social__button"><a href="#" id="social__button__image1"></a></li>
+                    <li class="social__button"><a href="#" id="social__button__image2"></a></li>
+                    <li class="social__button"><a href="#" id="social__button__image3"></a></li>
+                    <li class="social__button"><a href="#" id="social__button__image4"></a></li>
+                </ul>
             </div>
         </div>
     </footer>
